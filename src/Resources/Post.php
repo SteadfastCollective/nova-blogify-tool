@@ -65,7 +65,7 @@ class Post extends Resource
 
             ImageUpload::make('Image', 'image', Image::class)
                 ->store(new StoreImage)
-                ->rules(['required']),
+                ->rules(['required'])
                 ->onlyOnForms(),
 
             BelongsTo::make('Category', 'category', Category::class)

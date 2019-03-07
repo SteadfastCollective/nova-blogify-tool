@@ -23,7 +23,7 @@ class Image extends Model
      */
     public function getLinkAttribute()
     {
-        return url('uploads/images/'.$this->filename);
+        return url('storage/images/'.$this->filename);
     }
 
     /**

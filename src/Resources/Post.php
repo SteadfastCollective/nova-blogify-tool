@@ -81,7 +81,9 @@ class Post extends Resource
 
             Textarea::make('Summary')->hideFromIndex(),
 
-            Trix::make('Body')->rules(['required', 'string']),
+            Trix::make('Body')
+                ->withFiles('public')
+                ->rules(['required', 'string']),
 
             Boolean::make('Featured')->sortable(),
 

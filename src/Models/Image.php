@@ -23,7 +23,7 @@ class Image extends Model
      */
     public function getLinkAttribute()
     {
-        return url('storage/images/'.$this->filename);
+        return url('storage/'.$this->filename);
     }
 
     /**
@@ -32,6 +32,6 @@ class Image extends Model
      */
     public function getThumbnailLinkAttribute()
     {
-        return url('uploads/images/'.config('nova-blogify.image_settings.disk').$this->thumbnail);
+        return url('storage/thumbs/'.config('nova-blogify.image_settings.disk').$this->thumbnail);
     }
 }
